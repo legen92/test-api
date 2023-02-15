@@ -24,7 +24,6 @@ def hello_world(request):
         ]
     
         img = Image.open(file_name)
-        img.show()
         arr_b64 = []
         def crop_image(img, crop_area, new_filename):
             cropped_image = img.crop(crop_area)
@@ -47,7 +46,7 @@ def hello_world(request):
             '3': arr_b64[3]
         }
 
-        target = 'Please click each image containing a tulip'
+        target = 'Please click each image containing sunflowers in a field'
 
         images2= {
             '4': arr_b64[4],
