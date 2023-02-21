@@ -1,10 +1,7 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 import base64
-from PIL import Image
 import os
-import requests
-import time
 import ocrspace
 api = ocrspace.API()
 
