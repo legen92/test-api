@@ -10,12 +10,12 @@ def hello_world(request):
     if request.method == 'GET':
         return Response({"message": "get"})
     elif request.method == 'POST':
-        base64_string = request.data["data"]
-        imgdata = base64.b64decode(base64_string)
-        file_name = os.path.join(os.path.dirname(__file__), 'image.png')
+        # base64_string = request.data["data"]
+        # imgdata = base64.b64decode(base64_string)
+        # file_name = os.path.join(os.path.dirname(__file__), 'image.png')
 
-        with open(file_name, 'wb') as f:
-            f.write(imgdata)
+        # with open(file_name, 'wb') as f:
+        #     f.write(imgdata)
 
-        text = api.ocr_file(file_name).replace("\r\n", " ").strip()
-        return Response({"message": "success","text":text})
+        # text = api.ocr_file(file_name).replace("\r\n", " ").strip()
+        return Response({"message": "success"})
