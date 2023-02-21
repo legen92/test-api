@@ -14,8 +14,8 @@ def hello_world(request):
         imgdata = base64.b64decode(base64_string)
         file_name = os.path.join(os.path.dirname(__file__), 'image.png')
 
-        # with open(file_name, 'wb') as f:
-        #     f.write(imgdata)
+        with open(file_name, 'wb') as f:
+            f.write(imgdata)
 
-        # text = api.ocr_file(file_name).replace("\r\n", " ").strip()
-        return Response({"message": "success","text":file_name})
+        text = api.ocr_file(file_name).replace("\r\n", " ").strip()
+        return Response({"message": "success","text":text})
