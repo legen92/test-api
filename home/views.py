@@ -11,7 +11,7 @@ def hello_world(request):
         return Response({"message": "success get"})
     elif request.method == 'POST':
         base64_string = request.data["data"]
-        # imgdata = base64.b64decode(base64_string)
+        imgdata = base64.b64decode(base64_string)
         file_name = os.path.join(os.path.dirname(__file__), 'image.png')
 
         # with open(file_name, 'wb') as f:
