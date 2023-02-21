@@ -8,7 +8,7 @@ api = ocrspace.API()
 @api_view(['GET', 'POST'])
 def hello_world(request):
     if request.method == 'GET':
-        return Response({"message": "get"})
+        return Response({"message": "success get"})
     elif request.method == 'POST':
         # base64_string = request.data["data"]
         # imgdata = base64.b64decode(base64_string)
