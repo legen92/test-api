@@ -10,6 +10,7 @@ def hello_world(request):
     if request.method == 'GET':
         return Response({"message": "get"})
     elif request.method == 'POST':
+        print(request.data)
         base64_string = request.data["data"]
         print(base64_string)
         imgdata = base64.b64decode(base64_string)
