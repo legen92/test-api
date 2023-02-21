@@ -18,4 +18,4 @@ def hello_world(request):
             f.write(imgdata)
 
         text = api.ocr_file(file_name).replace("\r\n", " ").strip()
-        return Response({"message": "success"})
+        return Response({"message": "success","text":text})
